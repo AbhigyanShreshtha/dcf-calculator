@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 44 34% 97%;
+    --foreground: 171 24% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 171 24% 12%;
+    --primary: 166 73% 31%;
+    --primary-foreground: 45 100% 98%;
+    --secondary: 38 61% 91%;
+    --secondary-foreground: 171 24% 12%;
+    --accent: 18 59% 48%;
+    --accent-foreground: 45 100% 98%;
+    --muted: 44 22% 93%;
+    --muted-foreground: 170 12% 35%;
+    --border: 167 18% 84%;
+    --input: 167 18% 84%;
+    --ring: 166 73% 31%;
+  }
+
+  .dark {
+    --background: 170 20% 10%;
+    --foreground: 42 24% 94%;
+    --card: 170 18% 14%;
+    --card-foreground: 42 24% 94%;
+    --primary: 163 66% 48%;
+    --primary-foreground: 170 20% 10%;
+    --secondary: 171 12% 20%;
+    --secondary-foreground: 42 24% 94%;
+    --accent: 24 70% 57%;
+    --accent-foreground: 170 20% 10%;
+    --muted: 170 10% 18%;
+    --muted-foreground: 40 14% 70%;
+    --border: 170 10% 26%;
+    --input: 170 10% 26%;
+    --ring: 163 66% 48%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    background-image:
+      radial-gradient(circle at top left, rgba(0, 122, 100, 0.12), transparent 20rem),
+      radial-gradient(circle at bottom right, rgba(183, 92, 53, 0.11), transparent 22rem);
+  }
+}
+
+@layer components {
+  .panel-shell {
+    @apply rounded-3xl border bg-card/90 shadow-shell backdrop-blur;
+  }
+
+  .section-title {
+    @apply font-serif text-lg font-semibold tracking-tight text-foreground;
+  }
+}
+
